@@ -1,0 +1,234 @@
+
+/* RESET */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: #fffaf3;
+    color: #29211c;
+}
+
+/* HEADER */
+
+header {
+    background-color: #211a16;
+    padding: 20px 8%;
+}
+
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo {
+    color: #fff;
+    font-size: 25px;
+    font-weight: bold;
+}
+
+.logo span {
+    color: #e84b27;
+}
+
+.back {
+    color: white;
+    text-decoration: none;
+    font-size: 15px;
+    transition: 0.3s;
+}
+
+.back:hover {
+    color: #e84b27;
+}
+
+/* HERO */
+
+.hero {
+    min-height: 330px;
+    background:
+        linear-gradient(rgba(0,0,0,0.65), rgba(0,0,0,0.65)),
+        url("https://images.unsplash.com/photo-1513104890138-7c749659a591?w=1600")
+        center/cover no-repeat;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding: 50px 20px;
+}
+
+.hero-content {
+    max-width: 700px;
+    color: white;
+}
+
+.subtitle {
+    color: #ff7045;
+    letter-spacing: 4px;
+    font-size: 13px;
+    font-weight: bold;
+    margin-bottom: 15px;
+}
+
+.hero h1 {
+    font-size: 48px;
+    margin-bottom: 20px;
+}
+
+.hero h1 span {
+    color: #ff5833;
+}
+
+.hero-content > p:last-child {
+    font-size: 17px;
+    line-height: 1.7;
+}
+
+/* MAIN */
+
+.container {
+    width: 85%;
+    max-width: 1200px;
+    margin: 65px auto;
+}
+
+.container h2 {
+    text-align: center;
+    font-size: 35px;
+    color: #b83218;
+    margin-bottom: 12px;
+}
+
+.description {
+    text-align: center;
+    color: #777;
+    margin-bottom: 40px;
+}
+
+/* DRINKS GRID */
+
+.drinks-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 25px;
+}
+
+/* DRINK CARD */
+
+.drink-card {
+    background-color: white;
+    border-radius: 15px;
+    overflow: hidden;
+    box-shadow: 0 5px 20px rgba(0,0,0,0.08);
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.drink-card:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 12px 25px rgba(0,0,0,0.15);
+}
+
+.drink-card img {
+    width: 100%;
+    height: 190px;
+    object-fit: cover;
+}
+
+.drink-info {
+    padding: 20px;
+}
+
+.drink-info h3 {
+    font-size: 20px;
+    margin-bottom: 10px;
+    color: #29211c;
+}
+
+.drink-info p {
+    font-size: 14px;
+    color: #777;
+    line-height: 1.5;
+    min-height: 42px;
+    margin-bottom: 15px;
+}
+
+.price {
+    display: inline-block;
+    color: #d94323;
+    font-size: 20px;
+    font-weight: bold;
+}
+
+/* FOOTER */
+
+footer {
+    background-color: #211a16;
+    color: white;
+    text-align: center;
+    padding: 35px 20px;
+}
+
+footer h3 {
+    color: #ff5833;
+    font-size: 24px;
+    margin-bottom: 10px;
+}
+
+footer p {
+    color: #ccc;
+    font-size: 14px;
+}
+
+.copyright {
+    margin-top: 20px;
+    font-size: 12px;
+    color: #888;
+}
+
+/* RESPONSIVE */
+
+@media (max-width: 1000px) {
+    .drinks-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 600px) {
+    header {
+        padding: 18px 5%;
+    }
+
+    .logo {
+        font-size: 19px;
+    }
+
+    .back {
+        font-size: 12px;
+    }
+
+    .hero h1 {
+        font-size: 34px;
+    }
+
+    .hero-content > p:last-child {
+        font-size: 15px;
+    }
+
+    .container {
+        width: 90%;
+        margin: 40px auto;
+    }
+
+    .drinks-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .drink-card img {
+        height: 220px;
+    }
+}
