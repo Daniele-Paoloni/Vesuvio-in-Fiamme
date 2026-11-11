@@ -46,16 +46,245 @@
                     </div>
                 </div>
             </div>
+            <!DOCTYPE html>
+<html lang="it">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>I nostri dolci - Bella Napoli</title>
 
-            <!-- elenco dolci -->
-            <div id="Dolci" class="tm-tab-content">
-                <div class="tm-list">
-                    <!-- Gli studenti aggiungeranno qui i dolci -->
-                    <div class="tm-list-item">
-                        <p class="tm-placeholder-text">Sezione Dolci in attesa di implementazione...</p>
-                    </div>
-                </div>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Georgia', serif;
+            background-color: #211b18;
+            color: white;
+        }
+
+        header {
+            background: linear-gradient(rgba(0,0,0,0.65), rgba(0,0,0,0.65)),
+            url('https://images.unsplash.com/photo-1578985545062-69928b1d9587?w=1600')
+            center/cover;
+            text-align: center;
+            padding: 90px 20px;
+        }
+
+        header h1 {
+            font-size: 50px;
+            color: #f4c27a;
+            margin-bottom: 15px;
+        }
+
+        header p {
+            font-size: 19px;
+            color: #fff;
+        }
+
+        nav {
+            background-color: #a83225;
+            padding: 18px;
+            text-align: center;
+        }
+
+        nav a {
+            color: white;
+            text-decoration: none;
+            font-size: 18px;
+            margin: 0 20px;
+        }
+
+        nav a:hover {
+            color: #f4c27a;
+        }
+
+        .intro {
+            text-align: center;
+            padding: 50px 20px 25px;
+        }
+
+        .intro h2 {
+            color: #f4c27a;
+            font-size: 32px;
+            margin-bottom: 15px;
+        }
+
+        .intro p {
+            color: #ddd;
+            font-size: 17px;
+        }
+
+        .dolci-container {
+            max-width: 1100px;
+            margin: 40px auto;
+            padding: 20px;
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(230px, 1fr));
+            gap: 30px;
+        }
+
+        .dolce {
+            background-color: #332923;
+            border-radius: 15px;
+            overflow: hidden;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.4);
+            transition: transform 0.3s;
+        }
+
+        .dolce:hover {
+            transform: translateY(-8px);
+        }
+
+        .dolce img {
+            width: 100%;
+            height: 220px;
+            object-fit: cover;
+        }
+
+        .dolce-info {
+            padding: 22px;
+        }
+
+        .dolce-info h3 {
+            color: #f4c27a;
+            font-size: 23px;
+            margin-bottom: 12px;
+        }
+
+        .dolce-info p {
+            color: #ddd;
+            line-height: 1.6;
+            font-size: 15px;
+            min-height: 70px;
+        }
+
+        .prezzo {
+            display: block;
+            color: #f4c27a;
+            font-size: 21px;
+            font-weight: bold;
+            margin-top: 18px;
+        }
+
+        .footer {
+            background-color: #a83225;
+            text-align: center;
+            padding: 25px;
+            margin-top: 50px;
+            color: white;
+        }
+
+        @media (max-width: 600px) {
+            header h1 {
+                font-size: 34px;
+            }
+
+            nav a {
+                margin: 0 8px;
+                font-size: 15px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- HEADER -->
+    <header>
+        <h1>🍰 I Dolci di Bella Napoli</h1>
+        <p>Il finale perfetto per un'esperienza tutta italiana</p>
+    </header>
+
+    <!-- MENU -->
+    <nav>
+        <a href="#dolci">I nostri dolci</a>
+        <a href="#contatti">Contatti</a>
+    </nav>
+
+    <!-- INTRODUZIONE -->
+    <section class="intro" id="dolci">
+        <h2>La dolcezza della tradizione</h2>
+        <p>
+            Scopri i nostri dessert preparati con ingredienti
+            selezionati e tanto amore per la tradizione italiana.
+        </p>
+    </section>
+
+    <!-- ELENCO DOLCI -->
+    <section class="dolci-container">
+
+        <!-- TIRAMISU -->
+        <div class="dolce">
+            <img src="https://images.unsplash.com/photo-1571877227200-a0d98ea607e9?w=700"
+                 alt="Tiramisù">
+            <div class="dolce-info">
+                <h3>Tiramisù</h3>
+                <p>
+                    Il classico dolce italiano con mascarpone,
+                    savoiardi, caffè e una spolverata di cacao.
+                </p>
+                <span class="prezzo">€ 5,00</span>
             </div>
+        </div>
+
+        <!-- PANNA COTTA -->
+        <div class="dolce">
+            <img src="https://images.unsplash.com/photo-1488477181946-6428a0291777?w=700"
+                 alt="Panna cotta">
+            <div class="dolce-info">
+                <h3>Panna Cotta</h3>
+                <p>
+                    Delicata panna cotta artigianale
+                    accompagnata da una dolce salsa ai frutti di bosco.
+                </p>
+                <span class="prezzo">€ 4,50</span>
+            </div>
+        </div>
+
+        <!-- CHEESECAKE -->
+        <div class="dolce">
+            <img src="https://images.unsplash.com/photo-1533134242443-d4fd215305ad?w=700"
+                 alt="Cheesecake">
+            <div class="dolce-info">
+                <h3>Cheesecake</h3>
+                <p>
+                    Cremosa torta al formaggio con base croccante
+                    di biscotti e copertura ai frutti di bosco.
+                </p>
+                <span class="prezzo">€ 5,50</span>
+            </div>
+        </div>
+
+        <!-- CANNOLO -->
+        <div class="dolce">
+            <img src="https://images.unsplash.com/photo-1519915028121-7d3463d20b13?w=700"
+                 alt="Cannolo siciliano">
+            <div class="dolce-info">
+                <h3>Cannolo Siciliano</h3>
+                <p>
+                    Croccante cialda siciliana ripiena di ricotta
+                    dolce e gocce di cioccolato.
+                </p>
+                <span class="prezzo">€ 3,50</span>
+            </div>
+        </div>
+
+    </section>
+
+    <!-- FOOTER -->
+    <footer class="footer" id="contatti">
+        <h3>Pizzeria Bella Napoli</h3>
+        <p>La vera tradizione italiana, dal salato al dolce ❤️</p>
+        <p>© 2026 Pizzeria Bella Napoli</p>
+    </footer>
+
+</body>
+</html>
+
 
             <!-- elenco bevande -->
             <div id="Bevande" class="tm-tab-content">
