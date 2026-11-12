@@ -1,21 +1,170 @@
+
+/* RESET GENERALE */
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
 
+/* CORPO DELLA PAGINA */
 body {
-    font-family: Arial, Helvetica, sans-serif;
-    background-color: #fffaf3;
-    color: #29211c;
+    font-family: 'Arial', sans-serif;
+    background-color: #171717;
+    color: white;
 }
 
-
-header {
-    background-color: #211a16;
-    padding: 20px 8%;
+/* BANNER */
+.banner {
+    width: 100%;
+    height: 220px;
+    background: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.7)),
+                url("https://images.unsplash.com/photo-1517248135467-4c7edcad34c4");
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
-.banner{
-    
+.Menu {
+    font-size: 55px;
+    font-weight: bold;
+    letter-spacing: 8px;
+    color: #d4a64a;
+    text-shadow: 2px 2px 10px black;
+}
+
+/* CONTENITORE PRINCIPALE */
+.container {
+    max-width: 1200px;
+    margin: 50px auto;
+    padding: 20px;
+}
+
+/* TITOLO */
+.container h2 {
+    text-align: center;
+    font-size: 38px;
+    color: #d4a64a;
+    margin-bottom: 15px;
+}
+
+/* DESCRIZIONE */
+.description {
+    text-align: center;
+    font-size: 18px;
+    color: #cccccc;
+    margin-bottom: 45px;
+}
+
+/* GRIGLIA ANTIPASTI */
+.drinks-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 30px;
+}
+
+/* CARD */
+.antipast-card {
+    background-color: #242424;
+    border-radius: 15px;
+    overflow: hidden;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.4);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    border: 1px solid #383838;
+}
+
+/* EFFETTO HOVER */
+.antipast-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 10px 25px rgba(212,166,74,0.25);
+}
+
+/* IMMAGINI */
+.antipast-card img {
+    width: 100%;
+    height: 220px;
+    object-fit: cover;
+    display: block;
+    transition: transform 0.4s ease;
+}
+
+.antipast-card:hover img {
+    transform: scale(1.07);
+}
+
+/* INFORMAZIONI CARD */
+.antipast-info {
+    padding: 22px;
+    text-align: center;
+}
+
+/* NOME ANTIPASTO */
+.antipast-info h3 {
+    font-size: 22px;
+    color: #d4a64a;
+    margin-bottom: 12px;
+    letter-spacing: 1px;
+}
+
+/* DESCRIZIONE ANTIPASTO */
+.antipast-info p {
+    font-size: 15px;
+    color: #dddddd;
+    line-height: 1.5;
+    margin-bottom: 18px;
+}
+
+/* PREZZO */
+.price {
+    display: inline-block;
+    font-size: 20px;
+    font-weight: bold;
+    color: #171717;
+    background-color: #d4a64a;
+    padding: 8px 18px;
+    border-radius: 25px;
+}
+
+/* TABLET */
+@media screen and (max-width: 900px) {
+    .drinks-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .container h2 {
+        font-size: 30px;
+    }
+}
+
+/* TELEFONI */
+@media screen and (max-width: 600px) {
+    .drinks-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .banner {
+        height: 160px;
+    }
+
+    .Menu {
+        font-size: 40px;
+    }
+
+    .container {
+        margin: 25px auto;
+        padding: 15px;
+    }
+
+    .container h2 {
+        font-size: 27px;
+    }
+
+    .description {
+        font-size: 16px;
+    }
+
+    .antipast-card img {
+        height: 200px;
+    }
 }
