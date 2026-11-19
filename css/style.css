@@ -1,86 +1,383 @@
+/* =====================================
+   VESUVIO IN FIAMME
+   FOGLIO DI STILE GLOBALE
+===================================== */
+
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;800;900&display=swap');
+
+/* VARIABILI GLOBALI */
+
+:root {
+    --bg-main: #171412;
+    --bg-card: #211d19;
+    --gold: #d99a45;
+    --gold-light: #f0b969;
+    --white: #ffffff;
+    --text-secondary: #bdb6ae;
+    --border-gold: rgba(217,154,69,.25);
+}
+
+/* RESET */
+
+* {
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+    scroll-padding-top: 80px;
+}
 
 body {
-    font-family: Arial, sans-serif;
     margin: 0;
     padding: 0;
-    background-color: #1a1a1a;
-    color: #fff;
-    background-image: url('../img/background.jpg');
-    background-size: cover;
+    background: var(--bg-main);
+    color: var(--white);
+    font-family: 'Montserrat', sans-serif;
+    overflow-x: clip;
 }
+
 .container {
-    max-width: 1000px;
-    margin: 0 auto;
-    padding: 20px;
+    width: 100%;
+    max-width: 100%;
+    margin: 0;
 }
+
+/* =====================================
+   HEADER GLOBALE
+===================================== */
+
 .tm-header {
-    background: #fff;
-    color: #006666;
-    padding: 20px;
-    margin-bottom: 20px;
-    display: flex;
-    align-items: center;
-}
-.tm-site-icon {
-    font-size: 2rem;
-    margin-right: 15px;
-}
-.tm-site-title {
+    width: 100%;
     margin: 0;
-    font-size: 1.8rem;
-}
-.tm-nav-ul {
-    list-style: none;
     padding: 0;
-    display: flex;
-    background: rgba(0,0,0,0.8);
-    margin: 0;
 }
-.tm-nav-li {
-    flex: 1;
-    text-align: center;
-}
-.tm-nav-link {
-    display: block;
-    color: #fff;
-    text-decoration: none;
-    padding: 15px;
-    border-bottom: 3px solid transparent;
-}
-.tm-nav-link.active, .tm-nav-link:hover {
-    border-color: #76d7c4;
-}
-.tm-tab-content {
-    background: rgba(0, 0, 0, 0.75);
-    padding: 20px;
-    margin-top: 10px;
-}
-.tm-list-item {
+
+.hero-banner {
+    position: relative;
+    width: 100%;
+    aspect-ratio: 2.35 / 1;
+    min-height: 260px;
+    max-height: 650px;
+
     display: flex;
     align-items: center;
-    margin-bottom: 20px;
-    background: rgba(0,0,0,0.5);
-    padding: 10px;
+    justify-content: center;
+
+    overflow: hidden;
+    isolation: isolate;
+    background: var(--bg-main);
 }
-.tm-list-item-img {
-    width: 120px;
-    height: 120px;
-    object-fit: cover;
-    margin-right: 20px;
+
+.hero-banner::before {
+    content: "";
+    position: absolute;
+    inset: -8px;
+    z-index: -2;
+
+    background-image: url("../img/banner.png");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+
+    filter: blur(3px) brightness(.55);
+    transform: scale(1.02);
 }
-.tm-list-item-name {
-    margin: 0 0 10px 0;
-    font-size: 1.4rem;
+
+.hero-overlay {
+    position: absolute;
+    inset: 0;
+    z-index: -1;
+
+    background:
+        linear-gradient(90deg,
+            rgba(0,0,0,.25),
+            rgba(0,0,0,.15),
+            rgba(0,0,0,.25)),
+        linear-gradient(0deg,
+            rgba(0,0,0,.35),
+            transparent 60%);
 }
-.tm-list-item-price {
-    float: right;
-    color: #76d7c4;
+
+.hero-content {
+    width: 100%;
+    padding: 25px;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+    text-align: center;
+    color: var(--white);
 }
-.tm-list-item-description {
+
+.hero-logo {
+    width: clamp(75px, 10vw, 145px);
+    height: auto;
+    object-fit: contain;
+    margin-bottom: 12px;
+    filter: drop-shadow(0 4px 12px rgba(0,0,0,.5));
+}
+
+.hero-divider {
+    width: 55px;
+    height: 2px;
+    background: var(--gold);
+    margin-bottom: 14px;
+}
+
+.hero-subtitle {
+    font-size: clamp(11px, 1.5vw, 17px);
+    font-weight: 600;
+    letter-spacing: 7px;
+    color: #e7c18e;
+    margin-bottom: 12px;
+}
+
+.hero-content h1 {
+    font-size: clamp(25px, 5.3vw, 72px);
+    font-weight: 900;
+    letter-spacing: 2px;
+    line-height: 1.05;
     margin: 0;
-    color: #ccc;
+    color: var(--white);
+    text-transform: uppercase;
+    text-shadow: 0 4px 20px rgba(0,0,0,.65);
 }
-.tm-placeholder-text {
-    color: #888;
-    font-style: italic;
+
+.hero-content h1 span {
+    color: #e9a04a;
+}
+
+.hero-tagline {
+    margin-top: 17px;
+    font-size: clamp(8px, 1vw, 12px);
+    font-weight: 600;
+    letter-spacing: 3px;
+    color: rgba(255,255,255,.85);
+}
+
+.hero-bottom-line {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 3px;
+
+    background: linear-gradient(
+        90deg,
+        transparent,
+        #d99a45,
+        #f2c17e,
+        #d99a45,
+        transparent
+    );
+}
+
+/* =====================================
+   NAVIGAZIONE GLOBALE
+===================================== */
+
+.site-nav {
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 55px;
+
+    padding: 18px 20px;
+
+    background: rgba(23,20,18,.97);
+    border-bottom: 1px solid rgba(217,154,69,.4);
+    box-shadow: 0 5px 20px rgba(0,0,0,.3);
+}
+
+.site-nav a {
+    color: var(--white);
+    text-decoration: none;
+    font-size: 12px;
+    font-weight: 800;
+    letter-spacing: 1.5px;
+    transition: .3s ease;
+}
+
+.site-nav a:hover {
+    color: #e9a04a;
+    transform: translateY(-2px);
+}
+
+/* =====================================
+   FOOTER GLOBALE
+===================================== */
+
+.site-footer {
+    width: 100%;
+    background: var(--bg-main);
+    color: var(--white);
+    padding: 55px 7% 20px;
+    border-top: 2px solid var(--gold);
+}
+
+.footer-content {
+    max-width: 1150px;
+    margin: 0 auto;
+
+    display: grid;
+    grid-template-columns: 1.5fr 1fr 1fr 1fr;
+    gap: 40px;
+    padding-bottom: 40px;
+}
+
+.footer-brand h2 {
+    font-size: 22px;
+    font-weight: 900;
+    letter-spacing: 1px;
+    margin: 0 0 15px;
+}
+
+.footer-brand h2 span {
+    color: var(--gold);
+}
+
+.footer-brand p,
+.footer-column p {
+    color: var(--text-secondary);
+    font-size: 13px;
+    line-height: 1.8;
+}
+
+.footer-column h3 {
+    color: var(--gold);
+    font-size: 12px;
+    letter-spacing: 2px;
+    margin: 0 0 18px;
+}
+
+.footer-column a {
+    display: block;
+    color: var(--text-secondary);
+    text-decoration: none;
+    font-size: 13px;
+    margin-bottom: 12px;
+    transition: color .3s ease;
+}
+
+.footer-column a:hover {
+    color: var(--gold);
+}
+
+.footer-bottom {
+    max-width: 1150px;
+    margin: 0 auto;
+    padding-top: 20px;
+    border-top: 1px solid rgba(255,255,255,.12);
+
+    display: flex;
+    justify-content: space-between;
+    gap: 15px;
+    flex-wrap: wrap;
+}
+
+.footer-bottom p {
+    color: #827a72;
+    font-size: 11px;
+    margin: 0;
+}
+
+/* =====================================
+   RESPONSIVE GLOBALE
+===================================== */
+
+@media (max-width: 750px) {
+
+    .footer-content {
+        grid-template-columns: 1fr 1fr;
+        gap: 30px 20px;
+    }
+
+    .footer-brand {
+        grid-column: 1 / -1;
+    }
+
+    .site-footer {
+        padding: 40px 20px 20px;
+    }
+
+    .footer-bottom {
+        flex-direction: column;
+        text-align: center;
+    }
+}
+
+@media (max-width: 600px) {
+
+    .site-nav {
+        justify-content: flex-start;
+        gap: 25px;
+        padding: 15px 18px;
+        overflow-x: auto;
+        white-space: nowrap;
+        scrollbar-width: none;
+        -webkit-overflow-scrolling: touch;
+    }
+
+    .site-nav::-webkit-scrollbar {
+        display: none;
+    }
+
+    .site-nav a {
+        font-size: 10px;
+        letter-spacing: 1px;
+    }
+
+    .hero-banner {
+        aspect-ratio: 1.8 / 1;
+        min-height: 210px;
+    }
+
+    .hero-content {
+        padding: 12px;
+    }
+
+    .hero-logo {
+        width: 65px;
+        margin-bottom: 7px;
+    }
+
+    .hero-divider {
+        margin-bottom: 8px;
+        width: 35px;
+    }
+
+    .hero-subtitle {
+        letter-spacing: 4px;
+        margin-bottom: 7px;
+    }
+
+    .hero-content h1 {
+        font-size: clamp(22px, 6vw, 35px);
+        letter-spacing: 1px;
+    }
+
+    .hero-tagline {
+        font-size: 8px;
+        letter-spacing: 1px;
+        margin-top: 10px;
+    }
+}
+
+@media (max-width: 420px) {
+
+    .footer-content {
+        grid-template-columns: 1fr;
+    }
+
+    .footer-brand {
+        grid-column: auto;
+    }
 }
