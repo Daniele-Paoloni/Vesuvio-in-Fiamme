@@ -1,94 +1,414 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="it">
 <head>
     <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="css/antipasti.css">
-    <title>Antipasti</title>
+
+    <title>I Nostri Antipasti | Vesuvio in Fiamme</title>
+
+    <meta name="theme-color" content="#171412">
+    <meta name="description" content="Scopri gli antipasti di Vesuvio in Fiamme: fritti, sfizi e specialità per iniziare al meglio.">
+
+    <link rel="icon" type="image/png" href="img/fav.png">
+
+    <!-- FOGLI DI STILE -->
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/cibo.css">
 </head>
+
 <body>
-    <div class="banner">
-        <p class="Menu">MENU</p>
-    </div>
 
-    <main class="container">
+    <!-- HEADER CONDIVISO -->
 
-        <h2>L'antipasti pe sfonnatte</h2>
-        <p class="description">Caldi, Succosi, Pronti pe esse magnati!</p>
+    <header class="tm-header">
+        <div class="hero-banner">
+            <div class="hero-overlay"></div>
 
-        <div class="drinks-grid">
+            <div class="hero-content">
+                <img src="img/logo_white.png"
+                     alt="Vesuvio in Fiamme"
+                     class="hero-logo">
 
-            <div class="antipast-card">
-                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQqEUBYIQ6LsWm1yxCyrDl8bfK8k61Dva2Jq24JqvQ24Q&s=10"
-                     alt="SUPPLY">
-                <div class="antipast-info">
-                    <h3>SUPPLY</h3>
-                    <p>Palla di riso cotto ar sugo</p>
-                    <span class="price">€ 2,50</span>
-                </div>
+                <div class="hero-divider"></div>
+
+                <span class="hero-subtitle">P I Z Z E R I A</span>
+
+                <h1>VESUVIO <span>IN FIAMME</span></h1>
+
+                <p class="hero-tagline">
+                    IL CALORE DELLA TRADIZIONE NAPOLETANA
+                </p>
             </div>
 
-            <div class="antipast-card">
-                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRc31E0CzMd39Ddc33JGnaDyp460jamNMFGge5Bgy5XTA&s=10"
-                     alt="Bruschette">
-                <div class="antipast-info">
-                    <h3>BRUSCHETTE</h3>
-                    <p>Pane croccante co' pomodoro fresco e basilico</p>
-                    <span class="price">€ 3,00</span>
-                </div>
-            </div>
+            <div class="hero-bottom-line"></div>
+        </div>
+    </header>
 
-            <div class="antipast-card">
-                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR5KKouJpOiwgf5flxOYOWIarROHrDrXm5Oax7xCWq8Vw&s=10"
-                     alt="Fritto misto">
-                <div class="antipast-info">
-                    <h3>FRITTO MISTO</h3>
-                    <p>Un mix de robetta fritta tutta da magnà</p>
-                    <span class="price">€ 5,00</span>
-                </div>
-            </div>
 
-            <div class="antipast-card">
-                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ-5AdZvnKyUcdF-ahL1_86lriBNEHdMUaBHrnyjsR0hQ&s=10"
-                     alt="Olive ascolane">
-                <div class="antipast-info">
-                    <h3>OLIVE ASCOLANE</h3>
-                    <p>Olive ripiene de carne, panate e fritte</p>
-                    <span class="price">€ 4,50</span>
-                </div>
-            </div>
+    <!-- NAVIGAZIONE CONDIVISA -->
 
-            <div class="antipast-card">
-                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRGqfJT_aqZ_9kT8GdzHUXuPhKxj81yuvrtGclEPTOxxQ&s=10"
-                     alt="Fiori di zucca">
-                <div class="antipast-info">
-                    <h3>FIORI DE ZUCCA</h3>
-                    <p>Fiori fritti co' mozzarella e alici</p>
-                    <span class="price">€ 3,50</span>
-                </div>
-            </div>
+    <nav class="site-nav" aria-label="Menu principale">
+        <a href="index.html">HOME</a>
+        <a href="pizze.html">LE PIZZE</a>
+        <a href="antipasti.html" aria-current="page">ANTIPASTI</a>
+        <a href="bevande.html">BEVANDE</a>
+        <a href="dolci.html">DOLCI</a>
+        <a href="index.html#dove-siamo">DOVE TROVARCI</a>
+    </nav>
 
-            <div class="antipast-card">
-                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRfN6o8PrIT1TzraZ2zq3a2iJkgZU35orRQ9PbQ1E_T9g&s=10"
-                     alt="Supplì cacio e pepe">
-                <div class="antipast-info">
-                    <h3>SUPPLÌ CACIO E PEPE</h3>
-                    <p>Riso, pecorino e pepe, filante da paura</p>
-                    <span class="price">€ 3,00</span>
+
+    <!-- INTRODUZIONE ANTIPASTI -->
+
+    <section class="menu-intro">
+
+        <span>LE NOSTRE SPECIALITÀ</span>
+
+        <h2>I NOSTRI ANTIPASTI</h2>
+
+        <div class="menu-divider"></div>
+
+        <p>
+            Dalle specialità fritte ai grandi classici della tradizione,
+            ogni antipasto è preparato per stuzzicare il palato
+            e iniziare il pasto con gusto.
+        </p>
+
+    </section>
+
+
+    <!-- MENU ANTIPASTI -->
+
+    <section class="menu-section" id="menu">
+
+        <div class="menu-grid">
+
+
+            <!-- SUPPLÌ -->
+
+            <article class="menu-card">
+
+                <div class="menu-image">
+
+                    <span class="menu-tag">CLASSICO</span>
+
+                    <img
+                        src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQqEUBYIQ6LsWm1yxCyrDl8bfK8k61Dva2Jq24JqvQ24Q&s=10"
+                        alt="Supplì"
+                        loading="lazy">
+
                 </div>
-            </div>
-            <div class="antipast-card">
-                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSpOG-2krH_d_RN9ihub43YEAqcEhtw-V0WB7jy72dCBA&s "
-                     alt="Fiodena">
-                <div class="antipast-info">
+
+                <div class="menu-info">
+
+                    <h3>Supplì</h3>
+
+                    <p>
+                        Palla di riso cotto ar sugo,
+                        croccante fuori e morbida dentro.
+                    </p>
+
+                    <div class="menu-bottom">
+                        <span class="menu-price">€ 2,50</span>
+                    </div>
+
+                </div>
+
+            </article>
+
+
+            <!-- BRUSCHETTE -->
+
+            <article class="menu-card">
+
+                <div class="menu-image">
+
+                    <span class="menu-tag">SFIZIOSE</span>
+
+                    <img
+                        src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRc31E0CzMd39Ddc33JGnaDyp460jamNMFGge5Bgy5XTA&s=10"
+                        alt="Bruschette"
+                        loading="lazy">
+
+                </div>
+
+                <div class="menu-info">
+
+                    <h3>Bruschette</h3>
+
+                    <p>
+                        Pane croccante co' pomodoro fresco
+                        e basilico.
+                    </p>
+
+                    <div class="menu-bottom">
+                        <span class="menu-price">€ 3,00</span>
+                    </div>
+
+                </div>
+
+            </article>
+
+
+            <!-- FRITTO MISTO -->
+
+            <article class="menu-card">
+
+                <div class="menu-image">
+
+                    <span class="menu-tag">FRITTO</span>
+
+                    <img
+                        src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR5KKouJpOiwgf5flxOYOWIarROHrDrXm5Oax7xCWq8Vw&s=10"
+                        alt="Fritto misto"
+                        loading="lazy">
+
+                </div>
+
+                <div class="menu-info">
+
+                    <h3>Fritto Misto</h3>
+
+                    <p>
+                        Un mix de robetta fritta
+                        tutta da magnà.
+                    </p>
+
+                    <div class="menu-bottom">
+                        <span class="menu-price">€ 5,00</span>
+                    </div>
+
+                </div>
+
+            </article>
+
+
+            <!-- OLIVE ASCOLANE -->
+
+            <article class="menu-card">
+
+                <div class="menu-image">
+
+                    <span class="menu-tag">TRADIZIONE</span>
+
+                    <img
+                        src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ-5AdZvnKyUcdF-ahL1_86lriBNEHdMUaBHrnyjsR0hQ&s=10"
+                        alt="Olive ascolane"
+                        loading="lazy">
+
+                </div>
+
+                <div class="menu-info">
+
+                    <h3>Olive Ascolane</h3>
+
+                    <p>
+                        Olive ripiene de carne,
+                        panate e fritte.
+                    </p>
+
+                    <div class="menu-bottom">
+                        <span class="menu-price">€ 4,50</span>
+                    </div>
+
+                </div>
+
+            </article>
+
+
+            <!-- FIORI DI ZUCCA -->
+
+            <article class="menu-card">
+
+                <div class="menu-image">
+
+                    <span class="menu-tag">SPECIALITÀ</span>
+
+                    <img
+                        src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRGqfJT_aqZ_9kT8GdzHUXuPhKxj81yuvrtGclEPTOxxQ&s=10"
+                        alt="Fiori di zucca"
+                        loading="lazy">
+
+                </div>
+
+                <div class="menu-info">
+
+                    <h3>Fiori di Zucca</h3>
+
+                    <p>
+                        Fiori fritti co' mozzarella
+                        e alici.
+                    </p>
+
+                    <div class="menu-bottom">
+                        <span class="menu-price">€ 3,50</span>
+                    </div>
+
+                </div>
+
+            </article>
+            <!-- SUPPLÌ CACIO E PEPE -->
+
+            <article class="menu-card">
+
+                <div class="menu-image">
+
+                    <span class="menu-tag">GUSTOSO</span>
+
+                    <img
+                        src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRfN6o8PrIT1TzraZ2zq3a2iJkgZU35orRQ9PbQ1E_T9g&s=10"
+                        alt="Supplì cacio e pepe"
+                        loading="lazy">
+
+                </div>
+
+                <div class="menu-info">
+
+                    <h3>Supplì Cacio e Pepe</h3>
+
+                    <p>
+                        Riso, pecorino e pepe,
+                        filante da paura.
+                    </p>
+
+                    <div class="menu-bottom">
+                        <span class="menu-price">€ 3,00</span>
+                    </div>
+
+                </div>
+
+            </article>
+
+
+            <!-- FIODENA -->
+
+            <article class="menu-card">
+
+                <div class="menu-image">
+
+                    <span class="menu-tag">SPECIALITÀ</span>
+
+                    <img
+                        src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSpOG-2krH_d_RN9ihub43YEAqcEhtw-V0WB7jy72dCBA&s"
+                        alt="Fiodena"
+                        loading="lazy">
+
+                </div>
+
+                <div class="menu-info">
+
                     <h3>Fiodena</h3>
-                    <p>tabacco,droga,carta</p>
-                    <span class="price">€ 3,00</span>
+
+                    <p>
+                        tabacco, droga, carta
+                    </p>
+
+                    <div class="menu-bottom">
+                        <span class="menu-price">€ 3,00</span>
+                    </div>
+
                 </div>
+
+            </article>
+
+
+        </div>
+
+    </section>
+
+
+    <!-- BANNER FINALE -->
+
+    <section class="menu-banner">
+
+        <span>IL GUSTO COMINCIA DA QUI</span>
+
+        <h2>IL PIACERE DELLA TRADIZIONE</h2>
+
+        <div class="menu-divider"></div>
+
+        <p>
+            I nostri antipasti sono il modo migliore
+            per iniziare un'esperienza di gusto
+            all'insegna della tradizione.
+        </p>
+
+        <a href="index.html#dove-siamo" class="menu-banner-button">
+            VIENI A TROVARCI
+        </a>
+
+    </section>
+
+
+    <!-- FOOTER CONDIVISO -->
+
+    <footer class="site-footer">
+
+        <div class="footer-content">
+
+            <div class="footer-brand">
+
+                <h2>VESUVIO <span>IN FIAMME</span></h2>
+
+                <p>
+                    La passione per la vera pizza,
+                    il gusto della tradizione.
+                </p>
+
+            </div>
+
+
+            <div class="footer-column">
+
+                <h3>CONTATTI</h3>
+
+                <p>📍 Via Sant'Agnese, 46</p>
+
+                <p>00019 Tivoli (RM)</p>
+
+                <p>📞 +39 123 456 7891</p>
+
+                <p>✉️ info@vesuvioinfiamme.com</p>
+
+            </div>
+
+
+            <div class="footer-column">
+
+                <h3>ORARI</h3>
+
+                <p>Consulta i nostri orari di apertura</p>
+
+                <a href="index.html#orari">SCOPRI GLI ORARI</a>
+
+            </div>
+
+
+            <div class="footer-column">
+
+                <h3>SEGUICI</h3>
+
+                <a href="#" target="_blank" rel="noopener noreferrer">Instagram</a>
+
+                <a href="#" target="_blank" rel="noopener noreferrer">Facebook</a>
+
             </div>
 
         </div>
-    </main>
+
+
+        <div class="footer-bottom">
+
+            <p>
+                © 2026 Vesuvio in Fiamme – Tutti i diritti riservati.
+            </p>
+
+            <p>
+                Realizzato con il cuore per gli amanti della buona cucina.
+            </p>
+
+        </div>
+
+    </footer>
+
 </body>
 </html>

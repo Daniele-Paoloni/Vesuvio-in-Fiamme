@@ -1,0 +1,357 @@
+/* ==========================================
+   VESUVIO IN FIAMME
+   CIBO.CSS
+   STILE CONDIVISO DEL MENU
+========================================== */
+
+
+/* ==========================================
+   INTRODUZIONE
+========================================== */
+
+.menu-intro {
+    width: 100%;
+    padding: 75px 20px 35px;
+    background: var(--bg-main);
+    text-align: center;
+    color: var(--white);
+}
+
+.menu-intro > span {
+    color: var(--gold);
+    font-size: 11px;
+    font-weight: 700;
+    letter-spacing: 5px;
+}
+
+.menu-intro h2 {
+    font-size: clamp(30px, 4vw, 44px);
+    font-weight: 900;
+    letter-spacing: 2px;
+    margin: 14px 0;
+    text-transform: uppercase;
+}
+
+.menu-divider {
+    width: 55px;
+    height: 3px;
+    background: var(--gold);
+    margin: 18px auto;
+}
+
+.menu-intro p {
+    max-width: 650px;
+    margin: 0 auto;
+    color: var(--text-secondary);
+    font-size: 14px;
+    line-height: 1.9;
+}
+
+
+/* ==========================================
+   SEZIONE PRODOTTI
+========================================== */
+
+.menu-section {
+    width: 100%;
+    max-width: 1250px;
+    margin: 0 auto;
+    padding: 35px 25px 85px;
+    background: var(--bg-main);
+}
+
+.menu-grid {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 30px;
+}
+
+
+/* ==========================================
+   CARD PRODOTTO
+========================================== */
+
+.menu-card {
+    min-width: 0;
+    background: var(--bg-card);
+    border: 1px solid rgba(217,154,69,.2);
+    border-radius: 14px;
+    overflow: hidden;
+
+    display: flex;
+    flex-direction: column;
+
+    transition: .35s ease;
+}
+
+.menu-card:hover {
+    transform: translateY(-7px);
+    border-color: var(--gold);
+    box-shadow: 0 15px 35px rgba(217,154,69,.13);
+}
+
+
+/* ==========================================
+   IMMAGINI
+========================================== */
+
+.menu-image {
+    width: 100%;
+    height: 230px;
+    position: relative;
+    overflow: hidden;
+    background: #30271e;
+}
+
+.menu-image img {
+    display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform .5s ease;
+}
+
+.menu-card:hover .menu-image img {
+    transform: scale(1.07);
+}
+
+
+/* ==========================================
+   ETICHETTE
+========================================== */
+
+.menu-tag {
+    position: absolute;
+    top: 15px;
+    left: 15px;
+    z-index: 2;
+
+    padding: 7px 14px;
+
+    background: var(--gold);
+    color: var(--bg-main);
+
+    border-radius: 4px;
+
+    font-size: 10px;
+    font-weight: 900;
+    letter-spacing: 1px;
+}
+
+
+/* ==========================================
+   INFORMAZIONI PRODOTTO
+========================================== */
+
+.menu-info {
+    padding: 24px;
+
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+}
+
+.menu-info h3 {
+    color: var(--white);
+    font-size: 21px;
+    font-weight: 800;
+    margin-bottom: 12px;
+    letter-spacing: .3px;
+}
+
+.menu-info p {
+    color: var(--text-secondary);
+    font-size: 13px;
+    line-height: 1.8;
+    min-height: 70px;
+}
+
+
+/* ==========================================
+   PREZZO
+========================================== */
+
+.menu-bottom {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 10px;
+
+    margin-top: auto;
+    padding-top: 18px;
+
+    border-top: 1px solid rgba(255,255,255,.1);
+}
+
+.menu-price {
+    color: var(--gold);
+    font-size: 22px;
+    font-weight: 900;
+    white-space: nowrap;
+}
+
+
+/* ==========================================
+   BANNER FINALE
+========================================== */
+
+.menu-banner {
+    max-width: 1150px;
+    width: calc(100% - 40px);
+
+    margin: 0 auto 85px;
+    padding: 60px 25px;
+
+    text-align: center;
+
+    background:
+        linear-gradient(
+            120deg,
+            rgba(217,154,69,.17),
+            rgba(96,21,21,.35)
+        ),
+        var(--bg-card);
+
+    border: 1px solid var(--border-gold);
+    border-radius: 14px;
+}
+
+.menu-banner > span {
+    color: var(--gold);
+    font-size: 11px;
+    font-weight: 700;
+    letter-spacing: 4px;
+}
+
+.menu-banner h2 {
+    color: var(--white);
+    font-size: clamp(25px, 4vw, 36px);
+    font-weight: 900;
+    letter-spacing: 1px;
+    margin-top: 15px;
+}
+
+.menu-banner p {
+    color: var(--text-secondary);
+    font-size: 14px;
+    line-height: 1.8;
+    margin-bottom: 28px;
+}
+
+.menu-banner-button {
+    display: inline-block;
+    padding: 15px 28px;
+
+    background: var(--gold);
+    color: var(--bg-main);
+
+    text-decoration: none;
+    border-radius: 5px;
+
+    font-size: 11px;
+    font-weight: 900;
+    letter-spacing: 1.5px;
+
+    transition: .3s ease;
+}
+
+.menu-banner-button:hover {
+    background: var(--gold-light);
+    transform: translateY(-3px);
+}
+
+
+/* ==========================================
+   RESPONSIVE TABLET
+========================================== */
+
+@media (max-width: 950px) {
+
+    .menu-grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        gap: 22px;
+    }
+
+    .menu-image {
+        height: 210px;
+    }
+
+}
+
+
+/* ==========================================
+   RESPONSIVE MOBILE
+========================================== */
+
+@media (max-width: 600px) {
+
+    .menu-intro {
+        padding: 55px 20px 25px;
+    }
+
+    .menu-intro > span {
+        font-size: 10px;
+        letter-spacing: 3px;
+    }
+
+    .menu-intro p {
+        font-size: 13px;
+    }
+
+    .menu-section {
+        padding: 25px 18px 55px;
+    }
+
+    .menu-grid {
+        grid-template-columns: 1fr;
+        gap: 22px;
+    }
+
+    .menu-image {
+        height: 230px;
+    }
+
+    .menu-info {
+        padding: 22px;
+    }
+
+    .menu-info h3 {
+        font-size: 20px;
+    }
+
+    .menu-info p {
+        min-height: auto;
+    }
+
+    .menu-banner {
+        margin-bottom: 55px;
+        padding: 45px 20px;
+    }
+
+    .menu-banner > span {
+        font-size: 10px;
+        letter-spacing: 2px;
+    }
+
+    .menu-banner p {
+        font-size: 13px;
+    }
+
+}
+
+
+/* ==========================================
+   TELEFONI PICCOLI
+========================================== */
+
+@media (max-width: 380px) {
+
+    .menu-bottom {
+        flex-wrap: wrap;
+    }
+
+    .menu-price {
+        font-size: 20px;
+    }
+
+}
